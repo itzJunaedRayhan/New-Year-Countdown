@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/1374076.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: Poppins;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper h2{
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.left{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 60%;
+    max-width: 800px;
+    min-height: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left h2{
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 3px 5px 3px;
+}
+.left .till-year{
+    font-size: 70px;
+    text-align: center;
+    color: #f3970d;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+.countdown{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.countdown .hours,
+.countdown .minutes,
+.countdown .seconds,
+.countdown .days{
+    width: 150px;
+    height: 150px;
+    background: tomato;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.countdown .days h1,
+.countdown .hours h1,
+.countdown .minutes h1,
+.countdown .seconds h1{
+    width: 100%;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.countdown .days p,
+.countdown .hours p,
+.countdown .minutes p,
+.countdown .seconds p{
+    display: block;
+    font-size: 20px;
+    width: 70%;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: -20%;
+    font-weight: bold;
+}
+
+.countdown span{
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    display: block;
+    color: #000;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+
+
+
+.right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author{
+    width: 450px;
+    height: 300px;
+}
+
+.author img{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .wrapper{
+        justify-content: center;
+    }
+    
+    .left{
+        max-width: 600px;
+    }
+
+    .countdown .hours,
+    .countdown .minutes,
+    .countdown .seconds,
+    .countdown .days{
+        width: 110px;
+        height: 110px;
+    }
+
+    .countdown .days p,
+    .countdown .hours p,
+    .countdown .minutes p,
+    .countdown .seconds p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .author{
+        display: none;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .countdown .hours,
+    .countdown .minutes,
+    .countdown .seconds,
+    .countdown .days{
+        width: 100px;
+        height: 100px;
+    }
+
+    .countdown .days h1,
+    .countdown .hours h1,
+    .countdown .minutes h1,
+    .countdown .seconds h1{
+        font-size: 50px;
+    }
+
+    .countdown .days p,
+    .countdown .hours p,
+    .countdown .minutes p,
+    .countdown .seconds p{
+        font-size: 13px;
+        bottom: -30%;
+    }
+
+    .countdown span {
+        width: 8px;
+        height: 8px;
+        margin-bottom: 5px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .left{
+        min-height: 380px;
+    }
+
+    .left .till-year{
+        font-size: 50px;
+    }
+    .countdown .hours,
+    .countdown .minutes,
+    .countdown .seconds,
+    .countdown .days{
+        width: 75px;
+        height: 75px;
+    }
+
+    .countdown .days h1,
+    .countdown .hours h1,
+    .countdown .minutes h1,
+    .countdown .seconds h1{
+        font-size: 30px;
+    }
+
+    .countdown .days p,
+    .countdown .hours p,
+    .countdown .minutes p,
+    .countdown .seconds p{
+        font-size: 10px;
+        bottom: -35%;
+        padding: 3px 4px;
+    }
+
+    .countdown span {
+        width: 8px;
+        height: 8px;
+        margin-bottom: 5px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .countdown .hours,
+    .countdown .minutes,
+    .countdown .seconds,
+    .countdown .days{
+        width: 65px;
+        height: 70px;
+    }
+
+    .countdown .days h1,
+    .countdown .hours h1,
+    .countdown .minutes h1,
+    .countdown .seconds h1{
+        font-size: 25px;
+    }  
+    
+    .countdown .days p,
+    .countdown .hours p,
+    .countdown .minutes p,
+    .countdown .seconds p{
+        width: 90%;
+        bottom: -40%;
+    }
+
+    .countdown span {
+        width: 8px;
+        height: 8px;
+        margin-bottom: 5px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .left{
+        min-height: 350px;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .countdown .hours,
+    .countdown .minutes,
+    .countdown .seconds,
+    .countdown .days{
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+}
